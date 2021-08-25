@@ -42,8 +42,8 @@ const numbers = [5, 10, 12, 7, 16, 11]
 const newNumbers = numbers.map((num) => num * 5);
 console.log(newNumbers);
 // filter method in javascript 
-const numbers = [{name:'shirt', price:'4000'},{name:'pant', price:5000}]
-const newNumbers = numbers.find((num) => num.price === 5000);
+const numbers = [{name:'shirt', price:'4000'},{name:'pant', price:'5000'}]
+const newNumbers = numbers.find((num) => num.price == 5000);
 console.log(newNumbers);
 // map method in javascript 
 const numbers = [5, 10, 12, 7, 16, 11]
@@ -81,5 +81,23 @@ const arr = [
     {name:'hat', price:'200', color:'yellow'},
     {name:'jacket', price:'7000', color:'blue'}
 ]
-const value = arr[2].price;
-console.log(value);
+// const value = arr[2].price;
+// console.log(value);
+const newArr = arr.find((num) => num.price == 200);
+console.log(newArr);
+// nested object destructuring in javascript
+const company = {
+    name:'it help center',
+    id: '23',
+    product:{
+        webdev:'fullstack',
+        framework:{
+            first:'react',
+            second:'vue',
+            third: 'angular'
+        },
+    },
+}
+//const product = company.product.framework.first;
+console.log(product);
+console.log(company.products?.framework.first)
